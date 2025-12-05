@@ -1,0 +1,21 @@
+<body>
+  <div class="wrapper">
+    <%- include("partials/header.ejs") %>
+
+    <div class="posts">
+      <% if (locals.posts && posts.length > 0) { %> <%
+      posts.slice().reverse().forEach(function(post) { %>
+      <article class="post-entry">
+        <h2><%= post.title %></h2>
+        <p><%= post.content %></p>
+      </article>
+      <% }); %> <% } else { %>
+      <p class="no-posts">
+        No posts yet. Go to the <a href="/">Home</a> page to create one!
+      </p>
+      <% } %>
+    </div>
+  </div>
+</body>
+
+<%- include("partials/footer.ejs") %>

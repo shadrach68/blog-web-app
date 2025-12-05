@@ -1,0 +1,30 @@
+<body>
+  <div class="wrapper">
+    <%- include("partials/header.ejs") %>
+
+    <main class="container">
+      <div class="new-post-container">
+        <h2>Create a New Post</h2>
+        <form action="/post" method="POST" class="post-form">
+          <input
+            type="text"
+            id="postTitle"
+            name="postTitle"
+            placeholder="Post Title"
+            required
+          />
+          <textarea
+            id="postContent"
+            name="postContent"
+            placeholder="What's on your mind?"
+            rows="10"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Publish Post</button>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+
+<%- include("partials/footer.ejs") %>
